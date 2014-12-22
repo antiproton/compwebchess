@@ -1,3 +1,20 @@
+<?php
+#------------------------------------------------------------------------------------------#
+#  Combwebchess                                                                            #
+#  Copyright (c) Dr. R. Urban                                                              #
+#  22.12.2014                                                                              #
+#  Released under the MIT license                                                          #
+#  https://github.com/antiproton                                                           #
+#------------------------------------------------------------------------------------------#
+/* load settings */
+        if (!isset($_CONFIG))
+                require 'includes/config.php';
+
+
+?>
+
+
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
@@ -6,20 +23,26 @@
 
   <link rel="stylesheet" href="css/chessboard.css" />
    <link rel="stylesheet" href="css/style.css" />
-   
-   
+
+
 <script src="js/json3.min.js"></script>
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/chessboard.js"></script>
-   
-   
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+
+<title><?php echo $CFG_SITE_NAME?></title>
+
+
 </head>
 
 <body>
 
 <div id="page">
 	<div id="header"><div id="headerleft">
-		<h1><a href="#">COMPANY NAME</a></h1></div>
+		<h1><a href="#"><?php echo $CFG_SITE_NAME?></a></h1></div>
 	<div id="menulinks">
 		<a href="#">Contact Us</a>
 		<a href="#">Pricing</a>
@@ -68,7 +91,7 @@ $(document).ready(init);
 </script>
 <br><br>Dr. R. Urban
 		<br>
-		
+
 	  </div>
 
 	<div id="sidebar">
@@ -78,7 +101,7 @@ $(document).ready(init);
 		    <input type="text" name="textfield">
 USER </p>
 		  <p>
-		    <input type="text" name="textfield"> 
+		    <input type="text" name="textfield">
 		    PASS
 		    <input type="submit" name="Submit" value="Senden">
 		  </p>
@@ -89,7 +112,7 @@ USER </p>
 	</div>
 
 	<div id="footer">
-		COMPCHESS</div>
+		<?php include "footer.php"; ?></div>
 
 
 </div>
